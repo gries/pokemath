@@ -1,0 +1,20 @@
+{
+    "name":         "gries/pokemath",
+    "description":  "A PHP library to make calculation in base pokemon",
+    "license":      "MIT",
+    "keywords":     ["pokemon", "math", "numbersystem"],
+    "type":         "library",
+    "authors":      [
+        {
+            "name":      "Christoph Rosse",
+            "email":     "christoph@rosse.at"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"gries\\Pokemath\\": "src"}
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "gries/number-system": "dev-master"
+    }
+}

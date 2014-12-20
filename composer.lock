@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "bfeeed631cd292b8ee513bf50a2966f9",
+    "packages": [
+        {
+            "name": "gries/number-system",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gries/number-system.git",
+                "reference": "67c341b8ca8bf9b791085156750bed65da84f199"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gries/number-system/zipball/67c341b8ca8bf9b791085156750bed65da84f199",
+                "reference": "67c341b8ca8bf9b791085156750bed65da84f199",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gries\\NumberSystem\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christoph Rosse",
+                    "email": "christoph@rosse.at"
+                }
+            ],
+            "description": "A php library to deal with dynamic number systems and conversion",
+            "keywords": [
+                "numeric",
+                "system"
+            ],
+            "time": "2014-12-20 18:57:25"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "gries/number-system": 20
+    },
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}
