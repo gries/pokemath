@@ -31,3 +31,14 @@ echo $snorlax
         ->multiply($snorlax)
         ->multiply($snorlax)
         ->value()."\n"; // -> nidorino-sandslash-klinklang-drifloon-gothita
+
+// make calculations
+
+$calculator = new \gries\Pokemath\PokeCalculator();
+
+$expression = '(ivysaur + ivysaur) * ivysaur#ivysaur';
+$result = $calculator->calculate('(ivysaur + ivysaur) * ivysaur#ivysaur');
+
+echo $expression."\n";
+echo $calculator->translate($expression);
+echo ' = '.$result->value(). '('.$result->asDecimalString().")\n";

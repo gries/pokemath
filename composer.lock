@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gries/number-system.git",
-                "reference": "67c341b8ca8bf9b791085156750bed65da84f199"
+                "reference": "910fa0f7b03129e3978fac8a6cc1a0f455945c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gries/number-system/zipball/67c341b8ca8bf9b791085156750bed65da84f199",
-                "reference": "67c341b8ca8bf9b791085156750bed65da84f199",
+                "url": "https://api.github.com/repos/gries/number-system/zipball/910fa0f7b03129e3978fac8a6cc1a0f455945c09",
+                "reference": "910fa0f7b03129e3978fac8a6cc1a0f455945c09",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                 "numeric",
                 "system"
             ],
-            "time": "2014-12-20 18:57:25"
+            "time": "2015-01-04 19:01:04"
         }
     ],
     "packages-dev": [
