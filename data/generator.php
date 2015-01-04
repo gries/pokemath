@@ -7,7 +7,7 @@ unset($rows[0]);
 
 $data = [];
 foreach ($rows as $pokeRow) {
-    $pokeData = explode(';', $pokeRow);
+    $pokeData = explode(',', $pokeRow);
 
     $id = $pokeData[2];
     $name = $pokeData[1];
