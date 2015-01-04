@@ -1,0 +1,4 @@
+suites:
+  gries_poke_math:
+    namespace: gries\Pokemath
+    psr4_prefix: gries\Pokemath

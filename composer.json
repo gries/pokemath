@@ -13,8 +13,10 @@
     "autoload": {
         "psr-4": {"gries\\Pokemath\\": "src"}
     },
-    "minimum-stability": "dev",
     "require": {
         "gries/number-system": "dev-master"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1"
     }
 }
