@@ -1,4 +1,4 @@
-Number-System
+Pokemath
 ========
 
 This PHP-Library can be used to make calculations base pokemon.
@@ -6,9 +6,9 @@ This PHP-Library can be used to make calculations base pokemon.
 Installation
 ------------
 
-Number-System can be installed via. Composer:
+Pokemath can be installed via. Composer:
 
-    composer require "gries/number-system"
+    composer require "gries/pokemath"
 
 Rebuild the classes
 ------------------
