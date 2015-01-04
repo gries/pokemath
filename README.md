@@ -64,9 +64,11 @@ $calculator = new \gries\Pokemath\PokeCalculator();
 $expression = '(ivysaur + ivysaur) * ivysaur#ivysaur';
 $result = $calculator->calculate('(ivysaur + ivysaur) * ivysaur#ivysaur');
 
-echo $expression."\n";                                                  // -> (ivysaur + ivysaur) * ivysaur#ivysaur
+echo $expression."\n";                                                  
+// -> (ivysaur + ivysaur) * ivysaur#ivysaur
 echo $calculator->translate($expression);                              
-echo ' = '.$result->value(). '('.$result->asDecimalString().")\n";      // -> (1 + 1) * 701 = venusaur#venusaur(1402)
+echo ' = '.$result->value(). '('.$result->asDecimalString().")\n";      
+// -> (1 + 1) * 701 = venusaur#venusaur(1402)
 ```
 
 Author
