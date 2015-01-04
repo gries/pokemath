@@ -708,6 +708,6 @@ class PokeNumberSystem extends NumberSystem
             'diancie',
             'hoopa',
             'volcanion',
-            ], '-');
+            ], '#');
     }
 }
