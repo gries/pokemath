@@ -17,7 +17,7 @@ class PokeCalculatorSpec extends ObjectBehavior
     {
         $this
             ->translate('The value is: ivysaur#ivysaur')
-            ->shouldBe('The value is: 701')
+            ->shouldBe('The value is: 1404')
         ;
     }
 
@@ -25,7 +25,7 @@ class PokeCalculatorSpec extends ObjectBehavior
     {
         $this
             ->translate('volcanion + ivysaur')
-            ->shouldBe('699 + 1')
+            ->shouldBe('700 + 2')
         ;
     }
 
@@ -33,7 +33,7 @@ class PokeCalculatorSpec extends ObjectBehavior
     {
         $this
             ->translate('(bulbasaur + ivysaur) * ivysaur#ivysaur')
-            ->shouldBe('(0 + 1) * 701')
+            ->shouldBe('(1 + 2) * 1404')
         ;
     }
 
@@ -41,8 +41,8 @@ class PokeCalculatorSpec extends ObjectBehavior
     {
 
         $this
-            ->calculate('(ivysaur + ivysaur) * ivysaur#ivysaur')  // (1+1) * 701 = 1402
-            ->shouldHaveADecimalValueOf(1402)
+            ->calculate('(ivysaur + ivysaur) * ivysaur#ivysaur')  // (2+2) * 1404 = 5616 
+            ->shouldHaveADecimalValueOf(5616)
         ;
     }
 
@@ -54,8 +54,8 @@ class PokeCalculatorSpec extends ObjectBehavior
                 if ($actual->asDecimalString() === $expectedValue) {
                     return true;
                 }
-
-                return false;
+                
+		return false;
             }
         ];
     }

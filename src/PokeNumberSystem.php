@@ -8,6 +8,7 @@ class PokeNumberSystem extends NumberSystem
     public function __construct()
     {
         parent::__construct([
+            'missingno',
             'bulbasaur',
             'ivysaur',
             'venusaur',
