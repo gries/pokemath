@@ -3,7 +3,10 @@
 namespace gries\Pokemath;
 
 use gries\NumberSystem\Exception\NumberParseException;
+use gries\NumberSystem\Expression;
+use gries\NumberSystem\ExpressionConverter;
 use gries\NumberSystem\Number;
+use gries\NumberSystem\NumberSystem;
 
 /**
  * Class PokeCalculator
@@ -15,14 +18,23 @@ use gries\NumberSystem\Number;
  */
 class PokeCalculator
 {
+    const INPUT_DECIMAL = 'decimal';
+    const INPUT_POKENUMBER = 'pokenumber';
+
     /**
      * @var PokeNumberSystem
      */
     protected $numberSystem;
 
+    /**
+     * @var ExpressionConverter
+     */
+    protected $converter;
+
     public function __construct()
     {
         $this->numberSystem = new PokeNumberSystem();
+        $this->converter = new ExpressionConverter();
     }
 
     /**
@@ -34,36 +46,19 @@ class PokeCalculator
      *
      * @return string
      */
-    public function translate($expression)
+    public function translate($expression, $inputFormat = self::INPUT_POKENUMBER)
     {
-        $parsingResult      = $expression;
-        $cleanedExpression  = preg_replace('/[^a-z#\s]/', '', $expression);
-        $expressionParts    = explode(' ', $cleanedExpression);
+        $inputSystem = $this->numberSystem;
+        $outputSystem = new NumberSystem();
 
-        foreach ($expressionParts as $part) {
-            $parsedPart = $this->parseExpressionPart($part);
-            $parsingResult = preg_replace('/'.$part.'/', $parsedPart, $parsingResult, 1);
+        if ($inputFormat === self::INPUT_DECIMAL) {
+            $inputSystem = new NumberSystem();
+            $outputSystem = $this->numberSystem;
         }
 
-        return $parsingResult;
-    }
+        $expression = new Expression($expression, $inputSystem);
 
-    /**
-     * Parse the part of a expression.
-     *
-     * @param $part
-     *
-     * @return PokeNumber
-     */
-    protected function parseExpressionPart($part)
-    {
-        try {
-            $number = new PokeNumber($part);
-
-            return $number->asDecimalString();
-        } catch (NumberParseException $e) {
-            return $part;
-        }
+        return $this->converter->convert($expression, $outputSystem)->value();
     }
 
     /**

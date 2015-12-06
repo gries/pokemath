@@ -3,6 +3,7 @@
 namespace spec\gries\Pokemath;
 
 use gries\NumberSystem\Number;
+use gries\Pokemath\PokeCalculator;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -34,6 +35,14 @@ class PokeCalculatorSpec extends ObjectBehavior
         $this
             ->translate('(bulbasaur + ivysaur) * ivysaur#ivysaur')
             ->shouldBe('(1 + 2) * 1404')
+        ;
+    }
+
+    function it_translates_a_decimal_expression_to_pokenumbers()
+    {
+        $this
+            ->translate('(1 + 2) * 1404', PokeCalculator::INPUT_DECIMAL)
+            ->shouldBe('(bulbasaur + ivysaur) * ivysaur#ivysaur')
         ;
     }
 

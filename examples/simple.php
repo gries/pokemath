@@ -5,6 +5,7 @@ use gries\Pokemath\Numbers\Jigglypuff;
 use gries\Pokemath\Numbers\Snorlax;
 use gries\Pokemath\Numbers\Venusaur;
 use gries\Pokemath\Numbers\Wigglytuff;
+use gries\Pokemath\PokeCalculator;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -34,7 +35,7 @@ echo $snorlax
 
 // make calculations
 
-$calculator = new \gries\Pokemath\PokeCalculator();
+$calculator = new PokeCalculator();
 
 $expression = '(ivysaur + ivysaur) * ivysaur#ivysaur';
 $result = $calculator->calculate('(ivysaur + ivysaur) * ivysaur#ivysaur');
